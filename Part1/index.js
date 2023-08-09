@@ -11,6 +11,11 @@ let play = (clickedId) => {
     if (winner) {
       alert(`${winner} is the winner!`);
     }
+
+    const isBoardFull = board.every((square) => square !== null)
+    if(isBoardFull) {
+        alert("Cat's game. There is no winner!")
+    }
     
     if(playerSpan.innerText === 'X') {
         playerSpan.innerText = 'O'
